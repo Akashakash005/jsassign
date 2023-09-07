@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Popup Message</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="showPopup">Show Popup</button>
+
+    <!-- The custom popup container -->
+    <div id="customPopupContainer" class="hidden">
+        <div id="customPopupContent" class="gradient-popup">
+            <h2>Popup Message</h2>
+            <p>day 3 session using JavaScript.</p>
+            <button id="closeCustomPopup" class="close-button" onclick="hideCustomPopup()">&times;</button>
+        </div>
+    </div>
+
+    <script>
+	// Function to show the custom popup
+function showCustomPopup() {
+    const customPopupContainer = document.getElementById("customPopupContainer");
+    customPopupContainer.classList.remove("hidden");
+}
+
+// Function to hide the custom popup
+function hideCustomPopup() {
+    const customPopupContainer = document.getElementById("customPopupContainer");
+    customPopupContainer.classList.add("hidden");
+}
+
+// Add event listener for showing the custom popup
+document.getElementById("showPopup").addEventListener("click", showCustomPopup);
+
+   </script>
+</body>
+</html>
